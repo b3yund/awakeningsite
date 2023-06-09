@@ -1,0 +1,46 @@
+.cartitem {
+  background-color: #000;
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  display: flex;
+}
+
+.image {
+  height: 100px;
+  width: 200px;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: 80px;
+}
+
+.details {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.details > * {
+  margin-right: 80px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.amount {
+}
+
+.quantity {
+}
+
+.removeButton {
+  color: white;
+  background-color: #111;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+}

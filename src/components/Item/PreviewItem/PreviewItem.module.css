@@ -1,0 +1,49 @@
+/* Item.module.css */
+#item {
+  width: calc(var(--theWidth) * 1vw);
+  height: 300px;
+  position: relative; /* Add relative position */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#slot {
+  width: 100%;
+  background-color: #101010;
+  position: absolute;
+  bottom: 0;
+  height: 0; /* Set initial height to 0 */
+  transition: height 0.4s; /* Add transition for smooth animation */
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#item:hover #slot {
+  height: 100%; /* Set height to 100% when hovering */
+}
+
+#slot > p {
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: left;
+  color: rgb(130, 218, 255);
+  animation: colorChange 4s linear infinite;
+  padding: 20px 20px 20px 20px;
+  word-wrap: break-word
+}
+
+@keyframes colorChange {
+  0% {
+    color: rgb(130, 218, 255);
+  }
+  50% {
+    color: rgb(68, 152, 255);
+  }
+  100% {
+    color: rgb(130, 218, 255);
+  }
+}

@@ -1,0 +1,137 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.section {
+  flex: 1;
+  min-height: 900px;
+}
+
+#navbar {}
+
+#headCaption {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#whatWeAreAbout {
+  background-color: rgb(16, 16, 16);
+}
+
+#products {
+  background-color: black;
+  position: relative;
+  justify-content: center;
+}
+
+#footer {}
+
+/*########################################################*/
+
+.heading {
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(130, 218, 255);
+  animation: colorChange 4s linear infinite;
+  margin: 0;
+}
+
+.sideText {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  animation: colorChange 4s linear infinite;
+  margin: 0px 60px;
+}
+
+.imageContainer {
+  margin: 20px;
+  transform: translateY(-100px)
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: black 1px solid;
+  border-radius: 100px;
+  backdrop-filter: blur(10px);
+  transform: scale(0.8);
+  transform-origin: center;
+  
+}
+
+/*########################################################*/
+
+@keyframes colorChange {
+  0% {
+    color: rgb(130, 218, 255);
+  }
+  50% {
+    color: rgb(68, 152, 255);
+  }
+  100% {
+    color: rgb(130, 218, 255);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .imageContainer {
+    margin: 20px 50px;
+    order: 2;
+    flex: 1;
+  }
+  
+  .content {
+    order: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100px);
+  }
+  
+  .heading {
+    font-size: 100px;
+  }
+  
+  .sideText {
+    font-size: 22px;
+  }
+
+/*########################################################*/
+
+
+}
+
+
+/*background: linear-gradient(-45deg, #000000, #000022, #000000);
+background-size: 400% 400%;
+animation: backgroundColorAnim 10s linear infinite;
+
+@keyframes backgroundColorAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}*/

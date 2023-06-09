@@ -1,0 +1,158 @@
+.navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    align-items: center; /*Vertically center Logo*/
+  }
+  
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 30px; /*Change spacing*/
+  }
+  
+  .logo a {
+    animation: colorChange 4s linear infinite;
+    text-decoration: none;
+  }
+  
+  .tabs {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-right: 40px; /*Change spacing*/
+  }
+  
+  .tabs li {
+    margin-right: 60px; /*Change spacing between*/
+  }
+  
+  .tabs li:last-child {
+    margin-right: 0;
+  }
+  
+  .tabs a {
+    animation: colorChange 4s linear infinite;
+    font-weight: bold;
+    font-size: 30px; /*Change font size*/
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .tabsOpen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+  }
+  
+  .tabsOpen li {
+    margin: 10px 0;
+  }
+
+  .tabsOpen a {
+    animation: colorChange 4s linear infinite;
+    text-decoration: none;
+  }
+  
+  .toggleInput {
+    display: none;
+  }
+  
+  .toggleLabel {
+    cursor: pointer;
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .toggleLabel {
+      display: block;
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      z-index: 999;
+      margin-right: 20px; /*Change spacing*/
+    }
+  
+    .toggleLabel span {
+      animation: bgColorChange 4s linear infinite;
+      display: block;
+      height: 3px;
+      margin-bottom: 5px;
+      transition: transform 0.2s ease-in-out;
+      width: 25px;
+    }
+  
+    .toggleInput:checked + .toggleLabel span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .toggleInput:checked + .toggleLabel span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .toggleInput:checked + .toggleLabel span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    .tabs {
+      display: none;
+    }
+  
+    .tabsOpen {
+      display: flex;
+    }
+  
+    .tabsOpen a {
+      font-size: 20px;
+      text-decoration: none;
+    }
+  }
+
+  @keyframes colorChange {
+    0% {
+        color: rgb(130, 218, 255);
+    }
+    50% {
+        color: rgb(68, 152, 255);
+    }
+    100% {
+        color: rgb(130, 218, 255);
+    }
+  }
+  @keyframes bgColorChange {
+    0% {
+        background-color: rgb(130, 218, 255);
+    }
+    50% {
+        background-color: rgb(68, 152, 255);
+    }
+    100% {
+        background-color: rgb(130, 218, 255);
+    }
+  }
+  
+  .animated-text {
+    animation-name: colorChange;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
